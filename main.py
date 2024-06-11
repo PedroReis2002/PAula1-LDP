@@ -1,27 +1,21 @@
-# Example file showing a basic pygame "game loop"
 import pygame
+from pygame import Surface
 
-# pygame setup
+# Inicializar o modulo Pygame
 pygame.init()
-screen = pygame.display.set_mode((1280, 720))
-clock = pygame.time.Clock()
-running = True
+print("Setup Start")
+# Criação de janela do PYgame
+window: Surface = pygame.display.set_mode(size=(600, 400))
 
-while running:
-    # poll for events
-    # pygame.QUIT event means the user clicked X to close your window
+# Carregar imagem e gerar uma superfície
+Background_surface = pygame.image.load("./Asset/Background.png")
+# 48,35
+
+print("Setup End")
+print("Loop Start")
+while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
-
-    # fill the screen with a color to wipe away anything from last frame
-    screen.fill("purple")
-
-    # RENDER YOUR GAME HERE
-
-    # flip() the display to put your work on screen
-    pygame.display.flip()
-
-    clock.tick(60)  # limits FPS to 60
-
-pygame.quit()
+            print("Loop End")
+            pygame.quit()
+            quit()
