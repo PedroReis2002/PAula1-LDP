@@ -39,7 +39,7 @@ pygame.mixer.music.set_volume(0.1)
 print("Setup End")
 print("Loop Start")
 while True:
-    clock.tick(60) # Coloca a framerate máxima do jogo em 120 FPS
+    clock.tick(60)  # Coloca a framerate máxima do jogo em 60 FPS
     # print(clock.get_fps()) # Mostra o FPS no terminal o FPS
     window.blit(Background_surface, dest=Background_retangulo)
     window.blit(source=Player_Surf, dest=Player1_retangulo)
